@@ -7,8 +7,8 @@ class Character:
 
     def __init__(self, agent_id: str) -> None:
         # Validate using public canonical values and retain your own state.
-        raise NotImplementedError("TODO Character: implement __init__ and agent_id")
+        self._agent_id = CharacterDefinition(agent_id).agent_id
 
     @property
     def agent_id(self) -> str:
-        raise NotImplementedError("TODO Character.agent_id")
+        return self._agent_id
